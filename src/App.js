@@ -8,7 +8,7 @@ import './global.css';
 import Routes from './Routes';
 
 // importando componentes criados
-import { Loading } from './view/components';
+import { Loading, Notify, Alert } from './view/components';
 
 const theme = createTheme({
   palette: {
@@ -38,6 +38,8 @@ const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <Alert />
+        <Notify />
         <Loading />
         <Routes />   
       </ThemeProvider>
